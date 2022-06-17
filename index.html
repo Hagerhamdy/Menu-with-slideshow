@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <nav>
+        <input type="checkbox" name="" id="nav-toggle">
+        <div class="logo">Edu.</div>
+
+        <div class="menu">
+            <ul class="links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <form action="" class="search">
+                <div class="search-box">
+                    <input type="text" placeholder="Search here...">
+                    <label for="" class="icon">
+                        <i class="fas fa-search"></i>
+                    </label>
+                </div>
+            </form>     
+        </div>
+        
+        <label for="nav-toggle" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+      
+    </nav>
+
+    <div class="slider">
+        <div class="slides">
+            <!-- rdio btns start-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <!-- rdio btns end-->
+
+            <!-- img start -->
+            <div class="slide first">
+                <img src="images/1.jpg" alt="" name="slideImg">
+            </div>
+            <div class="slide">
+                <img src="images/2.webp" alt="" name="slideImg">
+            </div>
+            <div class="slide">
+                <img src="images/3.avif" alt="" name="slideImg">
+            </div>
+            <!-- img end -->
+
+            <!-- auto nav start -->
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+            <!-- auto nav end -->
+        </div>
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+        </div>
+
+    </div>
+
+    <script>
+        let i = 1;
+        setInterval(function () {
+            document.getElementById("radio" + i).checked = true;
+            i++;
+            if (i > 3) {
+                i = 1;
+            }
+        }, 4000)
+
+    </script>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
